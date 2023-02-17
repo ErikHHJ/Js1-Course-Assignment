@@ -37,6 +37,7 @@ const detailsCard = async () => {
             div.classList.add("flexdiv");
             const divTitle = document.createElement("h5");
             const divImg = document.createElement("img");
+            divImg.classList.add("killfeed");
             const category = document.createElement("h5");
             category.innerHTML = `Category: ${data.shopData.category}`
 
@@ -55,19 +56,7 @@ const detailsCard = async () => {
                 Legshot: ${obj.legDamage}`
                 div2.appendChild(range);
             })
-            /*const range1 = document.createElement("h5");
-            range1.innerHTML = `0-30m: <br> Headshot: ${data.weaponStats.damageRanges[0].headDamage} <br>
-            Bodyshot: ${data.weaponStats.damageRanges[0].bodyDamage} <br>
-            Legshot: ${data.weaponStats.damageRanges[0].legDamage}`
-            const range2 = document.createElement("h5");
-            range2.innerHTML = `0-30m: <br> Headshot: ${data.weaponStats.damageRanges[1].headDamage} <br>
-            Bodyshot: ${data.weaponStats.damageRanges[1].bodyDamage} <br>
-            Legshot: ${data.weaponStats.damageRanges[1].legDamage}`
-
-            /*const range3 = document.createElement("h5");
-            range2.innerHTML = `0-30m: <br> Headshot: ${data.weaponStats.damageRanges[1].headDamage} <br>
-            Bodyshot: ${data.weaponStats.damageRanges[2].bodyDamage} <br>
-            Legshot: ${data.weaponStats.damageRanges[2].legDamage}`*/
+            
             
 
             div.appendChild(divTitle);

@@ -160,3 +160,7 @@ body {
     border: 2px solid red;
     padding: 10px;
   }
+  .killfeed{
+    width: 128px;
+    height: 28px;
+  }
