@@ -32,6 +32,7 @@ const detailsCard = async () => {
             <h5>Magazine Size: ${data.weaponStats.magazineSize}</h5>
             <h5>Reload-time: ${data.weaponStats.reloadTimeSeconds}s</h5>`
 
+            
             const div = document.createElement("div");
             div.classList.add("flexdiv");
             const divTitle = document.createElement("h5");
@@ -42,6 +43,33 @@ const detailsCard = async () => {
             divTitle.innerHTML = "Killfeed Icon:"
             divImg.src = data.killStreamIcon
 
+            const damageRanges = document.createElement("h5");
+            const div2 = document.createElement("div");
+            div2.classList.add("rangestats");
+            damageRanges.innerHTML = "Damage Ranges:";
+            const rangeData = data.weaponStats.damageRanges;
+            rangeData.forEach ((obj) => {
+                const range = document.createElement("h5");
+                range.innerHTML = `${obj.rangeStartMeters}m - ${obj.rangeEndMeters}m <br> Headshot: ${obj.headDamage} <br>
+                Bodyshot: ${obj.bodyDamage} <br>
+                Legshot: ${obj.legDamage}`
+                div2.appendChild(range);
+            })
+            /*const range1 = document.createElement("h5");
+            range1.innerHTML = `0-30m: <br> Headshot: ${data.weaponStats.damageRanges[0].headDamage} <br>
+            Bodyshot: ${data.weaponStats.damageRanges[0].bodyDamage} <br>
+            Legshot: ${data.weaponStats.damageRanges[0].legDamage}`
+            const range2 = document.createElement("h5");
+            range2.innerHTML = `0-30m: <br> Headshot: ${data.weaponStats.damageRanges[1].headDamage} <br>
+            Bodyshot: ${data.weaponStats.damageRanges[1].bodyDamage} <br>
+            Legshot: ${data.weaponStats.damageRanges[1].legDamage}`
+
+            /*const range3 = document.createElement("h5");
+            range2.innerHTML = `0-30m: <br> Headshot: ${data.weaponStats.damageRanges[1].headDamage} <br>
+            Bodyshot: ${data.weaponStats.damageRanges[2].bodyDamage} <br>
+            Legshot: ${data.weaponStats.damageRanges[2].legDamage}`*/
+            
+
             div.appendChild(divTitle);
             div.appendChild(divImg);
             container.appendChild(detailsTitle);
@@ -50,6 +78,10 @@ const detailsCard = async () => {
             container.appendChild(detailsCost);
             container.appendChild(detailsStats);
             container.appendChild(div);
+            container.appendChild(damageRanges);
+            container.appendChild(div2)
+
+
         
     }
     catch(error){
