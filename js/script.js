@@ -1,6 +1,7 @@
 const url = "https://valorant-api.com/v1/weapons";
 const main = document.querySelector(".container");
-const bopdy = document.querySelector("body");
+
+
 
 
 const getData = async () => {
@@ -26,6 +27,9 @@ const getData = async () => {
             <h5>First Bullet Accuracy: ${obj.weaponStats.firstBulletAccuracy}</p>
             <h5>Magazine Size: ${obj.weaponStats.magazineSize}</h5>
             <h5>Reload-time: ${obj.weaponStats.reloadTimeSeconds}s</h5>`
+            const detailsLink = document.createElement("a");
+            detailsLink.href = `./details.html?uuid=${obj.uuid}`;
+            detailsLink.innerHTML = "Details"
             
             
             
@@ -33,6 +37,7 @@ const getData = async () => {
             div.appendChild(cardImg);
             div.appendChild(cardCost);
             div.appendChild(stats);
+            div.appendChild(detailsLink);
             main.appendChild(div);
     
     

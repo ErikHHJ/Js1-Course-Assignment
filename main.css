@@ -89,7 +89,7 @@ body {
     transition-duration: .25s;
   }
   .menu__item:hover {
-    background-color: #CFD8DC;
+    background-color: #ab3f3f;
   } 
   .container{
     display: grid;
@@ -119,5 +119,22 @@ body {
   .error{
     margin-top: 5px;
     color: white;
+  }
+  .footer{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-align: center;
+  }
+  .details-container {
+    margin-top:67px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
   }
   
