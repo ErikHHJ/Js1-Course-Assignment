@@ -25,6 +25,7 @@ const detailsCard = async () => {
             detailsCost.innerHTML = `Cost: ${data.shopData.cost}`
 
             const detailsStats = document.createElement("div");
+            detailsStats.classList.add("stats");
             detailsStats.innerHTML = `<h5>Equip-time: ${data.weaponStats.equipTimeSeconds}s</h5>
             <h5>Fire-Rate: ${data.weaponStats.fireRate} rps</h5>
             <h5>First Bullet Accuracy: ${data.weaponStats.firstBulletAccuracy}</p>
