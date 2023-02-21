@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="./js/contact.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+    
+    
+        
+            <ul class="menu__box">
+              <li id="myid"><a class="menu__item" href="./index.html">Home</a></li>
+              <li><a class="menu__item" href="details.html">Details</a></li>
+              <li><a class="menu__item" href="#">Contact(current)</a></li>
+             
+            </ul>
+          </div>
+          </nav>
+          <main class="contactpage">
+           <header class="header">
+            <h1>Contact Us!</h1>
+            <h5>Find any inconsistencies? A type of stat you are missing? Tell us!</h5>
+           </header>
+
+            <form id="form">
+                <input id="name" placeholder="Name" type="text">
+                <input id="subject" placeholder="Subject" type="text">
+                <input id="email" placeholder="Email" type="text">
+                <input id="streetaddress" placeholder="Street Address" type="text">
+                <span id="message"></span>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+            <span class="parapopup"></span>
+          </main>
+</body>
+</html>

@@ -5,6 +5,7 @@
 }
 body {
     background-color: rgb(22, 22, 22);
+    font-family:monospace;
 }
 .title {
     margin: 0 auto;
@@ -164,3 +165,41 @@ body {
     width: 128px;
     height: 28px;
   }
+  .contactpage {
+    margin-top: 76px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #form {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    gap: 40px;
+  }
+  .header {
+    color: white;
+    margin-bottom: 35px;
+  }
+#form input {
+  padding: 3px;
+}
+#submit {
+  width: 80px;
+  background-color: red;
+  margin: 0 auto;
+}
+#message {
+  margin: 0 auto;
+  color: white;
+  font-size: 25px;
+}
+#popup{
+  width: 80vw;
+  height: 300px;
+}
+span p {
+  margin: 0 auto;
+  color: white;
+}
