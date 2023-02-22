@@ -7,6 +7,9 @@ body {
     background-color: rgb(22, 22, 22);
     font-family:monospace;
 }
+main {
+  min-height: 100vh;
+}
 .title {
     margin: 0 auto;
 }
@@ -202,4 +205,28 @@ body {
 span p {
   margin: 0 auto;
   color: white;
+}
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #9c41f2;
+  border-radius: 100%;
+  margin: auto;
+  display: none;
+  animation: spin 1s infinite linear;
+  position: absolute;
+  top: 80px;
+  left: 47.5%;
+}
+#loading.display {
+  display: block;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

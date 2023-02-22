@@ -1,15 +1,10 @@
 
-const fullName = /^[a-zA-Z0-9 ]*$/;
-const subject = /^[a-zA-Z0-9 ]{8,30}$/;
+const fullName = /^[a-zA-Z0-9 åæø]{8,30}$/;
+const subject = /^[a-zA-Z0-9 åæø]{8,30}$/;
 const email = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
-const streetAddress = /^[a-zA-Z0-9 ]{25,50}$/;
+const streetAddress = /^[a-zA-Z0-9 åæø]{25,50}$/;
 
 const regexTester = (input, rule) => {
-    if (input === '') {
-      console.log('RegTest:', 'false, empty string');
-      return false;
-    }
-    console.log('RegTest:', rule.test(input));
     return rule.test(input);
 };
 const submit = document.querySelector("#submit");
@@ -30,8 +25,12 @@ form.onsubmit = (e) => {
     !regexTester(userEmail.value, email) ||
     !regexTester(address.value, streetAddress)
     ){
-        message.innerHTML = "One of the inputs are in the wrong format. Check again"
+        message.innerHTML = `One of the inputs are in the wrong format. Check again <br> Username: ${regexTester(userName.value, fullName)} <br> Subject: ${regexTester(userSubject.value, subject)} <br>
+        Email: ${regexTester(userEmail.value, email)} <br> Address: ${regexTester(address.value, streetAddress)} `
         return; 
+    }else if (!regexTester(userName.value, fullName)){
+        
+
     } else {
         message.innerHTML = "Success";
         popupmessage.innerHTML = `<p>Type your message to us here:<p/> <br><input id="popup" placeholder="Your Message" type="text">`
