@@ -124,6 +124,9 @@ main {
     margin-top: 5px;
     color: white;
   }
+  .errorDiv{
+    margin-top: 75px;
+  }
   .footer{
     background-color: black;
     color: white;
@@ -189,9 +192,24 @@ main {
   padding: 3px;
 }
 #submit {
+  width: 150px;
+  background-color: red;
+  margin: 0 auto;
+  padding: 10px;
+}
+.messagebtn{
   width: 80px;
   background-color: red;
   margin: 0 auto;
+  width: 150px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.parapopup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #message {
   margin: 0 auto;
@@ -229,4 +247,11 @@ span p {
   to {
     transform: rotate(360deg);
   }
+}
+.formsection {
+  display: flex;
+  flex-direction: column;
+}
+.formsection label {
+  color: white;
 }

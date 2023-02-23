@@ -33,14 +33,29 @@
            </header>
 
             <form id="form">
-                <input id="name" placeholder="Name" type="text">
-                <input id="subject" placeholder="Subject" type="text">
-                <input id="email" placeholder="Email" type="text">
-                <input id="streetaddress" placeholder="Street Address" type="text">
+                <div class="formsection">
+                  <label for="name">*Full Name, At least 8 Characters</label>
+                <input name="name" id="name" placeholder="Name" type="text">
+                </div>
+                <div class="formsection">
+                  <label for="subject">*Subject of your comment, At least 10 Characters</label>
+                <input name="subject" id="subject" placeholder="Subject" type="text">
+                </div>
+                <div class="formsection">
+                  <label for="email">*Valid email format</label>
+                <input name="email" id="email" placeholder="Email" type="text">
+                </div>
+                <div class="formsection">
+                  <label for="address">*Street address + County + Postal Code + Zip. At least 25 characters</label>
+                <input name="address" id="streetaddress" placeholder="Full address + county + postal code + zip" type="text">
+                </div>
                 <span id="message"></span>
                 <button id="submit" type="submit">Submit</button>
             </form>
             <span class="parapopup"></span>
           </main>
+          <footer class="footer">
+            <h1>This page is for educational purposes only, images are property of Riot Games, and stats are from an unofficial API.</h1>
+          </footer>
 </body>
 </html>

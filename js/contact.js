@@ -1,7 +1,7 @@
 
 const fullName = /^[a-zA-Z0-9 åæø]{8,30}$/;
-const subject = /^[a-zA-Z0-9 åæø]{8,30}$/;
-const email = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+const subject = /^[a-zA-Z0-9 åæø]{8,50}$/;
+const email = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})$/;
 const streetAddress = /^[a-zA-Z0-9 åæø]{25,50}$/;
 
 const regexTester = (input, rule) => {
@@ -16,7 +16,7 @@ const address = document.querySelector("#streetaddress");
 const message = document.querySelector("#message");
 const popupmessage = document.querySelector(".parapopup");
 const main = document.querySelector(".contactpage"); 
-console.log(popupmessage)
+
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -29,11 +29,19 @@ form.onsubmit = (e) => {
         Email: ${regexTester(userEmail.value, email)} <br> Address: ${regexTester(address.value, streetAddress)} `
         return; 
     }else if (!regexTester(userName.value, fullName)){
-        
 
     } else {
         message.innerHTML = "Success";
         popupmessage.innerHTML = `<p>Type your message to us here:<p/> <br><input id="popup" placeholder="Your Message" type="text">`
+        const messageSubmit = document.createElement("button");
+        messageSubmit.classList.add("messagebtn")
+        messageSubmit.innerHTML = "Submit Message"
+        popupmessage.appendChild(messageSubmit);
+        messageSubmit.onclick = () => {
+            popupmessage.innerHTML = "<p>Thank you for submitting the message!</p>"
+        }
+        
+
         
     }
 }

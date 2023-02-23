@@ -21,13 +21,17 @@ const getData = async () => {
         const results = await res.json();
         hideLoading()
         console.log(results);
-        results.data[8].shopData.cost = "0";
         
-
-        results.data.forEach((obj) => {
+        for (let i = 0; i < results.data.length; i++) {
+            const obj = results.data[i]
+            if (!obj.shopData){
+                continue
+            }
             const div = document.createElement("div");
             div.classList.add("card");
-    
+
+            
+            
     
             const cardImg = document.createElement("img");
             cardImg.src = obj.displayIcon;
@@ -35,6 +39,7 @@ const getData = async () => {
             cardTitle.innerHTML = obj.displayName;
             const cardCost = document.createElement("h5");
             cardCost.innerHTML = `Cost: ${obj.shopData.cost}`;
+            
 
             const stats = document.createElement("div");
             stats.innerHTML = `<h5>Equip-time: ${obj.weaponStats.equipTimeSeconds}s</h5>
@@ -56,18 +61,22 @@ const getData = async () => {
             container.appendChild(div);
     
     
-        })
+        }
     } catch (error) {
+        const errorDiv = document.querySelector(".errorDiv");
         console.log(error)
         const errorMsg = document.createElement("h2");
         errorMsg.classList.add("error");
         errorMsg.innerHTML = "An error occurred while fetching data, sorry for the inconvenience.";
-        container.appendChild(errorMsg);
+        errorDiv.appendChild(errorMsg);
         
         
 
     }
+        }
+        
+            
    
-}
+
 getData();
 
