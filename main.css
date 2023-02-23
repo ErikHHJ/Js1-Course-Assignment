@@ -125,7 +125,11 @@ main {
     color: white;
   }
   .errorDiv{
-    margin-top: 75px;
+    margin: 0px auto;
+    position: absolute;
+    top: 110px;
+    left: 10%;
+    
   }
   .footer{
     background-color: black;

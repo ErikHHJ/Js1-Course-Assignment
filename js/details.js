@@ -83,7 +83,7 @@ const detailsCard = async () => {
         console.log(error)
         const errorMsg = document.createElement("h2");
         errorMsg.classList.add("error");
-        errorMsg.innerHTML = "An error occurred while fetching data, sorry for the inconvenience.";
+        errorMsg.innerHTML = "An error occurred while fetching data, sorry for the inconvenience. <br> Note: This page will only display detailed statistics if an item was clicked on home page.";
         container.appendChild(errorMsg);
     }
 }
